@@ -1,0 +1,28 @@
+{
+  "name": "forte-tooling",
+  "version": "0.0.1",
+  "description": "Tooling home task for Forte Frontend Jedi Course",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heliken/forte-tooling.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heliken/forte-tooling/issues"
+  },
+  "homepage": "https://github.com/Heliken/forte-tooling#readme",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
