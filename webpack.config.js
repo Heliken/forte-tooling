@@ -3,15 +3,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: {
-  	app: './src/index.js',
-  	print: './src/print.js',
+    app: './src/index.js',
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+    hot: true,
   },
   plugins: [
-  	new CleanWebpackPlugin(),
-  	new HtmlWebpackPlugin({
-  		title: 'Output Management',
-  	})
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+    })
   ],
   output: {
     filename: '[name].bundle.js',
@@ -21,17 +26,14 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-        ],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
-        	'file-loader',
+          'file-loader',
         ],
       },
-   	],
+    ],
   },
 };
